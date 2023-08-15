@@ -1,3 +1,4 @@
 class Expression < ApplicationRecord
-    belongs_to :blog
+    belongs_to :blogs
+    belongs_to :users
 end

@@ -1,4 +1,4 @@
 class Blog < ApplicationRecord
-    has_many :publish, dependent: :destroy
-    has_many :admin, through: :publish
+    has_many :publishes, dependent: :destroy
+    has_many :admins, through: :publishes
 end

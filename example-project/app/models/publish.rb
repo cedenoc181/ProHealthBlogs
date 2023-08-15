@@ -1,5 +1,5 @@
 class Publish < ApplicationRecord
-belongs_to :admin
-belongs_to :blog
+belongs_to :admins
+belongs_to :blogs
 
 end
