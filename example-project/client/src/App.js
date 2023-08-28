@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import './index.css'
+import InquiryPage from "./InquiryPage";
+import LocationPage from "./LocationPage";
+import FAQpage from "./FAQpage";
+import Home from "./Home";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -12,7 +16,36 @@ function App() {
   // }, []);
 
   return (
-    <p> blank </p>
+    <div> 
+      <p> blank </p>
+
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/LocationPage">Location</Link>
+            </li>
+            <li>
+              <Link to="/FAQpage">FAQ</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/LocationPage" component={LocationPage} />
+          <Route path="/InquiryPage" component={InquiryPage} />
+          <Route path="/FAQpage" component={FAQpage} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+
+      </div>
+
     // <BrowserRouter>
     //   <div className="App">
     //     <Switch>
@@ -25,7 +58,10 @@ function App() {
     //     </Switch>
     //   </div>
     // </BrowserRouter>
-    //testinggggg
+
+
+
+
   );
 }
 
